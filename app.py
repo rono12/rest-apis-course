@@ -33,8 +33,7 @@ def create_app(db_url=None):
     api = Api(app)
     migrate = Migrate(app, db)
 
-    app.config["JWT_SECRET_KEY"] = "286855340872465753043412562251496133603"
-    # str(secrets.SystemRandom().getrandbits(128))
+    app.config["JWT_SECRET_KEY"] = "ron"
     jwt = JWTManager(app)
     
     @jwt.additional_claims_loader
