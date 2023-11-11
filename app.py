@@ -32,7 +32,7 @@ def create_app(db_url=None):
     db.init_app(app)
     api = Api(app)
     migrate = Migrate(app, db)
-
+    
     app.config["JWT_SECRET_KEY"] = "ron"
     jwt = JWTManager(app)
     
